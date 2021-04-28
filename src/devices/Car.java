@@ -8,7 +8,7 @@ public class Car {
     private int price;
 
 
-    public Car(String model, String producer, int horsepower, int doorsNumber, int price){
+    public Car(String model, String producer, int horsepower, int doorsNumber, int price) {
         this.doorsNumber = doorsNumber;
         this.model = model;
         this.horsepower = horsepower;
@@ -18,5 +18,9 @@ public class Car {
 
     public int getPrice() {
         return price;
+    }
+
+    public String toString() {
+        return model + " " + producer + " " + horsepower + " " + doorsNumber + " " + price;
     }
 }
