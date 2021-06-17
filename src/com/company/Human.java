@@ -1,4 +1,5 @@
 package com.company;
+import devices.Car;
 
 public class Human {
 
@@ -15,6 +16,10 @@ public class Human {
         this.firstName = firstName;
         this.lastName = lastName;
 
+    }
+
+    public String toString() {
+        return firstName + " " + lastName + " " + pet + " " + car + " " + salary;
     }
 
     public Double getSalary() {
