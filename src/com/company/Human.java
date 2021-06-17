@@ -10,6 +10,7 @@ public class Human {
     private Car car;
     private Phone phone;
     private Double salary;
+    private Integer cash;
 
 
     public Human(String firstName, String lastName, Animal pet, Car car, Phone phone) {
