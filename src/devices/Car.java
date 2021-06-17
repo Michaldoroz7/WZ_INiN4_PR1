@@ -1,19 +1,17 @@
 package devices;
 
-public class Car {
-    private final String model;
-    private final String producer;
-    private int horsepower;
-    private int doorsNumber;
-    private int price;
+public class Car extends Device{
+        int horsepower;
+        int doorsNumber;
+        int price;
 
+        public Car(String model,String producer, Integer yearOfProduction, int horsepower, int doorsNumber, int price ) {
+        super(model, producer, yearOfProduction);
 
-    public Car(String model, String producer, int horsepower, int doorsNumber, int price) {
         this.doorsNumber = doorsNumber;
-        this.model = model;
         this.horsepower = horsepower;
-        this.producer = producer;
         this.price = price;
+
     }
 
     public int getPrice() {
@@ -21,6 +19,11 @@ public class Car {
     }
 
     public String toString() {
-        return model + " " + producer + " " + horsepower + " " + doorsNumber + " " + price;
+        return horsepower + doorsNumber + " " + price;
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Im turning ON!");
     }
 }

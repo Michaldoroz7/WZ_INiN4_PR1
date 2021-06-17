@@ -1,5 +1,6 @@
 package com.company;
 import devices.Car;
+import devices.Phone;
 
 public class Human {
 
@@ -7,12 +8,14 @@ public class Human {
     private String lastName;
     private Animal pet;
     private Car car;
+    private Phone phone;
     private Double salary;
 
 
-    public Human(String firstName, String lastName, Animal pet, Car car) {
+    public Human(String firstName, String lastName, Animal pet, Car car, Phone phone) {
         this.car = car;
         this.pet = pet;
+        this.phone = phone;
         this.firstName = firstName;
         this.lastName = lastName;
 
