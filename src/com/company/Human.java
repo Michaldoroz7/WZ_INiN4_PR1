@@ -6,11 +6,11 @@ public class Human {
 
     private String firstName;
     private String lastName;
-    private Animal pet;
-    private Car car;
-    private Phone phone;
+    public Animal pet;
+    public Car car;
+    public Phone phone;
     private Double salary;
-    private Integer cash;
+    public Double cash;
 
 
     public Human(String firstName, String lastName, Animal pet, Car car, Phone phone) {

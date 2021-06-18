@@ -1,6 +1,9 @@
 package devices;
 
-public class Phone extends Device{
+import com.company.Human;
+import com.company.Salleable;
+
+public class Phone extends Device implements Salleable {
     double screenSize;
     int price;
 
@@ -16,4 +19,22 @@ public class Phone extends Device{
     public void turnOn() {
         System.out.println("Im Turning ON!");
     }
-}
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.phone == this) {
+            if (seller.cash >= price) {
+                buyer.cash -= price;
+                buyer.phone = seller.phone;
+                seller.phone = null;
+                seller.cash += price;
+                System.out.println("Transaction success.");
+            } else {
+                System.out.println("Not enough money.");
+            }
+        } else {
+            System.out.println("Seller doesnt have this phone");
+        }
+    }
+    }
+
