@@ -1,6 +1,9 @@
-package com.company;
+package creatures;
 
-public class Animal implements Salleable {
+import com.company.Human;
+import com.company.Salleable;
+
+public abstract class Animal implements Salleable, Feedable {
 
     private final String species;
     private Double weight;
@@ -19,11 +22,25 @@ public class Animal implements Salleable {
         return weight;
     }
 
-    public void feed() {
-        this.weight += 5.0;
+    @Override
+    public void feed(double foodWeight) {
+        if (weight <= 0)
+        {
+            System.out.println("Sorry, your animal is dead, you cant feed it anymore");
+        } else {
+            weight += foodWeight;
+            System.out.println("my weight is now " + weight);
+        }
+    }
 
-        if (this.weight <= 5.0){
-            System.out.println("How you want to feed your dead pet");
+    @Override
+    public void feed() {
+        if (weight <= 0)
+        {
+            System.out.println("Sorry, your animal is dead, you cant feed it anymore");
+        } else {
+            weight += 0.1;
+            System.out.println("my weight is now " + weight);
         }
     }
 
